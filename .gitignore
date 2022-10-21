@@ -3,3 +3,4 @@ resource/models
 resource/tokenizers
 resource/torch
 resource/vncorenlp
+.coverage

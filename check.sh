@@ -7,3 +7,5 @@ flake8 . || exit_code=$?
 # end
 if [[ "$exit_code" -ne "0" ]]; then echo "Previous command failed"; fi;
 exit $exit_code
+
+# pytest --pyargs --cov=./ner_service -s -vv ./tests/

@@ -2,8 +2,8 @@ import json
 
 from flask import Flask, jsonify, request
 
-from constants import AVAILABLE_MODELS
-from model import NERModel
+from ner_service.constants import AVAILABLE_MODELS
+from ner_service.model import NERModel
 
 app = Flask(__name__)
 app.config["DEBUG"] = False
