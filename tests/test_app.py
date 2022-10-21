@@ -1,6 +1,5 @@
-from ner_service.app import home, extract_entities
-from ner_service.constants import MODEL_PHOBERT_BASE_BILSTM_CRF
-from flask import request
+from ner_service.app import home
+
 
 def test_home():
     res = home()
