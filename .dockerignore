@@ -1,0 +1,9 @@
+env
+**/__pycache__
+
+resource/models/bilstm_crf
+resource/models/phobert_base
+resource/models/phobert_large
+resource/models/phobert_base_bilstm
+resource/models/phobert_large_bilstm
+resource/models/phobert_large_bilstm_crf
