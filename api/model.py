@@ -6,8 +6,8 @@ import tensorflow as tf
 from transformers import AutoTokenizer, TFAutoModel
 from transformers import TFRobertaForTokenClassification as Classifier
 
-from ner_service import constants
-from ner_service.crf import CRFModel
+from api import constants
+from api.crf import CRFModel
 
 PADDING_TAG = "PAD"
 CURRENT_DIR = os.getcwd()

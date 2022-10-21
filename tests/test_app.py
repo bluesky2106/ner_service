@@ -1,4 +1,4 @@
-from ner_service.app import home
+from api.app import home
 
 
 def test_home():

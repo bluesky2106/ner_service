@@ -1,4 +1,4 @@
-from ner_service.constants import MODEL_PHOBERT_BASE_BILSTM_CRF, check_model
+from api.constants import MODEL_PHOBERT_BASE_BILSTM_CRF, check_model
 
 
 def test_check_model():
