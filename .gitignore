@@ -5,4 +5,4 @@ __pycache__
 resource/models
 resource/tokenizers
 resource/torch
-resource/vncorenlp
+# resource/vncorenlp
