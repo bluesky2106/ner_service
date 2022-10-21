@@ -30,6 +30,7 @@ def check_model(model_name: str):
         return False
     return True
 
+
 RESOURCE_PHOBERT_BASE = "resource/models/phobert_base"
 RESOURCE_PHOBERT_LARGE = "resource/models/phobert_large"
 RESOURCE_BILSTM = "resource/models/bilstm"
