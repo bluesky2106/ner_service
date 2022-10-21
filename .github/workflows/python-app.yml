@@ -25,6 +25,10 @@ jobs:
         python-version: "3.10"
     - name: Install dependencies
       run: |
+        apt-get update
+        apt-get install -y openjdk-17-jre-headless
+        apt-get install -y openjdk-17-jdk-headless
+        apt-get clean
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         if [ -f requirements_test.txt ]; then pip install -r requirements_test.txt; fi
@@ -34,5 +38,5 @@ jobs:
     - name: Test with pytest
       run: |
         export PYTHONPATH="$PYTHONPATH:$(pwd)"
-        echo $PYTHONPATH
+        # echo $PYTHONPATH
         bash test.sh

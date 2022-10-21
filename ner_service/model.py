@@ -6,8 +6,8 @@ import tensorflow as tf
 from transformers import AutoTokenizer, TFAutoModel
 from transformers import TFRobertaForTokenClassification as Classifier
 
-from api import constants
-from api.crf import CRFModel
+from ner_service import constants
+from ner_service.crf import CRFModel
 
 PADDING_TAG = "PAD"
 CURRENT_DIR = os.getcwd()
@@ -135,6 +135,8 @@ class NERModel(object):
 
     def load_annotator(self):
         vncorenlp_dir = os.path.join(CURRENT_DIR, "resource/vncorenlp")
+        if not os.path.exists(vncorenlp_dir):
+            py_vncorenlp.download_model(save_dir=vncorenlp_dir)
         self.__annotator = py_vncorenlp.VnCoreNLP(annotators=["wseg"],
                                                   save_dir=vncorenlp_dir)
         os.chdir(CURRENT_DIR)

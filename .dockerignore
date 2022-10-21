@@ -1,5 +1,7 @@
 env
 **/__pycache__
+.pytest_cache
+.coverage
 
 resource/models/bilstm_crf
 resource/models/phobert_base
