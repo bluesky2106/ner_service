@@ -125,13 +125,13 @@ class NERModel(object):
         self.load_tokenizer()
 
         self.load_bilstm_model()
-        # self.load_bilstm_crf_model()
-        # self.load_phobert_base_model()
-        # self.load_phobert_large_model()
-        # self.load_phobert_base_bilstm_model()
-        # self.load_phobert_large_bilstm_model()
+        self.load_bilstm_crf_model()
+        self.load_phobert_base_model()
+        self.load_phobert_large_model()
+        self.load_phobert_base_bilstm_model()
+        self.load_phobert_large_bilstm_model()
         self.load_phobert_base_bilstm_crf_model()
-        # self.load_phobert_large_bilstm_crf_model()
+        self.load_phobert_large_bilstm_crf_model()
 
     def load_annotator(self):
         vncorenlp_dir = os.path.join(CURRENT_DIR, "resource/vncorenlp")
