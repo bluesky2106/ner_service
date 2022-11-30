@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 python:latest as build
+FROM --platform=linux/amd64 python:3.9 as build
 
 RUN mkdir -p /usr/src/app/backend
 
@@ -12,6 +12,8 @@ RUN apt-get update && \
     apt-get install -y openjdk-17-jdk-headless && \
     apt-get clean;
 
+RUN pip install --upgrade pip
+
 RUN pip install -U -r requirements.txt
 
-CMD python app.py
+CMD python ner_service/app.py
