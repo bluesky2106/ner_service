@@ -32,5 +32,5 @@ docker push akagi2106/named-entity-recognition:v3
 ```
 
 ```
-docker run --name ner -p 8080:8080 akagi2106/named-entity-recognition:v3
+docker run --name ner -p 8080:8080 -e PYTHONPATH="$PYTHONPATH:$(pwd)" akagi2106/named-entity-recognition:v3
 ```
